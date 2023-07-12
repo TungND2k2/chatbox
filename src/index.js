@@ -9,6 +9,9 @@ let app = express();
 // config app
 viewEngine(app);
 
+app.get('/', (req, res) => {
+    return res.render('hi')
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
